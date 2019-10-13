@@ -3,19 +3,7 @@ const exphbs = require("express-handlebars")
 const bodyParser = require("body-parser")
 const path = require("path")
 
-
-const Sequelize = require("sequelize")
-const db = new Sequelize('sports.db', 'root', 'hockey930', {
-    host: 'localhost',
-    dialect: 'mysql',
-
-    pool: {
-        max: 5,
-        min: 0,
-        idle: 10000
-    },
-
-});
+const db = require("./config/database")
 
 db.authenticate()
     .then(() => console.log("database connected"))
