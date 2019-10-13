@@ -6,7 +6,7 @@ let nbaQueryURL = "https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.ph
 let nhlQueryURL = "https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=4380"
 
 let teamIds = [];
-let teamValue = "Buffalo_Bills";
+let teamValue = "";
 
 nflId = "4391"
 mlbId = "4424"
@@ -208,5 +208,12 @@ function getNbaStandings() {
 getNflStandings();
 
 
+module.exports = {
+    getMlbStandings, 
+    getNbaStandings, 
+    getNflStandings, 
+    getNhlStandings, 
+    getTeamRoster, 
+    getTeamSchedule};
 
 
