@@ -14,7 +14,11 @@ nhlId = "4380"
 nbaId = "4387"
 
 teamURL = "https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=" + teamValue
+
 NhlStandingsURL = "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=" + nhlId + "&s=1819"
+NflStandingsURL = "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=" + nflId + "&s=1718"
+NbaStandingsURL = "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=" + nbaId + "&s=1819"
+MlbStandingsURL = "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=" + mlbId + "&s=1718"
 
 
 
@@ -157,7 +161,52 @@ function getNhlStandings() {
 
 };
 
-getNhlStandings();
+function getMlbStandings() {
+
+    axios.get(MlbStandingsURL)
+        .then(function (response) {
+
+            console.log(response.data);
+
+
+        });
+
+
+};
+
+function getNflStandings() {
+
+    axios.get(NflStandingsURL)
+        .then(function (response) {
+
+            console.log(response);
+
+
+        });
+
+
+};
+
+function getNbaStandings() {
+
+    axios.get(NbaStandingsURL)
+        .then(function (response) {
+
+            response.data.table.forEach(element =>{
+                console.log("Team: " + element.name)
+                console.log("Points For: " + element.goalsfor)
+                console.log("Goals Points Against: " + element.goalsagainst)
+                console.log("Wins: " + element.win)
+                console.log("Losses: " + element.loss)
+                console.log("-------------------------")
+            })
+        });
+
+
+};
+
+getNflStandings();
+
 
 
 
