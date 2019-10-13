@@ -8,7 +8,13 @@ let nhlQueryURL = "https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.ph
 let teamIds = [];
 let teamValue = "Buffalo_Bills";
 
+nflId = "4391"
+mlbId = "4424"
+nhlId = "4380"
+nbaId = "4387"
+
 teamURL = "https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=" + teamValue
+NhlStandingsURL = "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=" + nhlId + "&s=1819"
 
 
 
@@ -110,7 +116,7 @@ function getTeamRoster() {
 
                 axios.get(queryTeamInfo)
                     .then(function (response) {
-                        
+
                         response.data.player.forEach(element => {
                             console.log(element.strPlayer)
                             console.log(element.dateBorn)
@@ -130,5 +136,28 @@ function getTeamRoster() {
         });
 };
 
-getTeamRoster();
+
+function getNhlStandings() {
+
+    axios.get(NhlStandingsURL)
+        .then(function (response) {
+
+            response.data.table.forEach(element =>{
+                console.log("Team: " + element.name)
+                console.log("Goals For: " + element.goalsfor)
+                console.log("Goals Against: " + element.goalsagainst)
+                console.log("Wins: " + element.win)
+                console.log("Losses: " + element.loss)
+                console.log("Points: " + element.total);
+                console.log("-------------------------")
+            })
+
+        });
+
+
+};
+
+getNhlStandings();
+
+
 
