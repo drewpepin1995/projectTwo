@@ -1,4 +1,12 @@
 const Sequelize = require("sequelize")
 const db = require("../config/database")
 
-const Sport
+const Team = db.define('team', {
+    id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true
+    },
+    team: {
+        type: Sequelize.STRING
+    }
+});
