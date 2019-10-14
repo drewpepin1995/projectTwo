@@ -3,6 +3,10 @@ html {
     height: 100vh;
 }
 
+h1, h2 {
+    text-align:center
+}
+
 #logo {
     height: 300px;
     width: auto;
@@ -33,11 +37,14 @@ html {
 }
 
 ​#nflLogo {
-    height: 200px ​
+    height: 200px;
+    justify-content: center;
 }
 
+
 ​#nhlLogo {
-    height: 200px ​
+    height: 200px;
+    justify-content: center;
 }
 
 ​#NHL {
@@ -55,7 +62,8 @@ html {
 }
 
 ​#nbaLogo {
-    height: 200px ​
+    height: 200px;
+    justify-content: center;
 }
 
 ​ #MLB {
@@ -65,10 +73,17 @@ html {
     background: lightgrey;
 }
 
+
 ​#mlbLogo {
-    height: 200px ​
+    height: 200px;
+    justify-content: center;
 }
 
 ​#favTeam {
     color: white
+}
+
+
+.browser-default {
+    justify-content: center;
 }
