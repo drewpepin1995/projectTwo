@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
     const sportsAPI = require('../../src/services/api.js')
 
@@ -25,12 +25,38 @@ $(document).ready(function () {
     MlbStandingsURL = "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=" + mlbId + "&s=1718"
 
 
-    $("#teamChoiceNfl").on("click", function(){
+    $("#teamChoiceNFL").on("click", function() {
+
+        let teamValue = $("#teamChoiceNfl option:selected").text();
+
+        console.log(teamValue)
+            // sportsAPI.getTeamRoster();
+            // sportsAPI.getTeamSchedule();
+            // sportsAPI.getNflStandings();
+    });
+
+    $("#teamChoiceNhl").on("click", function() {
 
         let teamValue = $("#teamChoiceNfl option:selected").text();
         sportsAPI.getTeamRoster();
         sportsAPI.getTeamSchedule();
-        sportsAPI.getNflStandings();
+        sportsAPI.getNhlStandings();
+    });
+
+    $("#teamChoiceNba").on("click", function() {
+
+        let teamValue = $("#teamChoiceNfl option:selected").text();
+        sportsAPI.getTeamRoster();
+        sportsAPI.getTeamSchedule();
+        sportsAPI.getNbaStandings();
+    });
+
+    $("#teamChoiceMlb").on("click", function() {
+
+        let teamValue = $("#teamChoiceNfl option:selected").text();
+        sportsAPI.getTeamRoster();
+        sportsAPI.getTeamSchedule();
+        sportsAPI.getMlbStandings();
     });
 
 
