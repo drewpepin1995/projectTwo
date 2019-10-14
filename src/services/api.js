@@ -163,26 +163,14 @@ function getNhlStandings() {
 
 function getMlbStandings() {
 
-    axios.get(MlbStandingsURL)
-        .then(function (response) {
-
-            console.log(response.data);
-
-
-        });
+    
 
 
 };
 
 function getNflStandings() {
 
-    axios.get(NflStandingsURL)
-        .then(function (response) {
-
-            console.log(response);
-
-
-        });
+    
 
 
 };
@@ -205,7 +193,6 @@ function getNbaStandings() {
 
 };
 
-getNflStandings();
 
 
 module.exports = {
@@ -214,6 +201,12 @@ module.exports = {
     getNflStandings, 
     getNhlStandings, 
     getTeamRoster, 
-    getTeamSchedule};
+    getTeamSchedule,
+    teamValue
+};
+
+
+
+
 
 

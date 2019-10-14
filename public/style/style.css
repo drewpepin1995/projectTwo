@@ -1,32 +1,74 @@
-.list-group-item {
-    line-height: 2.5;
-  }
-  
-  body,html {
+body,
+html {
     height: 100vh;
-  }
-  #logo {
-  height: 300px;
-  width: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  }
-  
-  #narrow {
-    height: 100vh;
-    float: left ;
-    width: 25%;
-    background: lightgrey;
-  }
-  #wide {
+}
+
+#logo {
+    height: 300px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+​ #narrow {
     height: 100vh;
     float: left;
-    width: 75%;
-    background: lightblue;
-  }
-  
-  #bar {
-    height: 200px;
-    background: purple;
-  }
+    width: 20%;
+    background: navy;
+}
+
+#wide {
+    height: 100vh;
+    float: left;
+    width: 80%;
+    background: lightgrey;
+}
+
+​#NFL {
+    height: 100vh;
+    float: left;
+    width: 25%;
+    background: lightgrey;
+}
+
+​#nflLogo {
+    height: 200px ​
+}
+
+​#nhlLogo {
+    height: 200px ​
+}
+
+​#NHL {
+    height: 100vh;
+    float: left;
+    width: 25%;
+    background: lightgrey;
+}
+
+​ #NBA {
+    height: 100vh;
+    float: left;
+    width: 25%;
+    background: lightgrey;
+}
+
+​#nbaLogo {
+    height: 200px ​
+}
+
+​ #MLB {
+    height: 100vh;
+    float: left;
+    width: 25%;
+    background: lightgrey;
+}
+
+​#mlbLogo {
+    height: 200px ​
+}
+
+​#favTeam {
+    color: white
+}
