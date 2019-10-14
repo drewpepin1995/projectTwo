@@ -10,3 +10,5 @@ const Team = db.define('team', {
         type: Sequelize.STRING
     }
 });
+
+module.exports = Team;
