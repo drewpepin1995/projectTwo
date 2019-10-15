@@ -4,18 +4,16 @@
 <head>
     <title> WFSE</title>
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!--Let browser know website is optimized for mobile-->
-    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/Users/olympiacassidy/Desktop/style (1).css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 </head>
 
 <body>
-    <div>
-        <img src="../html/logos/WFSE.png" alt="logo" id="logo">
+    <div id="header">
+        <img src="/Users/olympiacassidy/Desktop/logos/logo.png" alt="logo" id="logo">
         <h1>
             World Famous Sports Encyclopedia
         </h1>
@@ -35,241 +33,280 @@
         <div class="input-field col s12">
             <!-- NATIONAL FOOTBALL LEAGUE-->
             <div id="NFL">
-                <img src="../html/logos/nfl.png" alt="National Football League" id="nflLogo">
+                <img src="/Users/olympiacassidy/Desktop/logos/nfl.png" alt="National Football League" id="nflLogo">
 
                 <br>
                 <select class="browser-default" id="teamChoiceNFL">
-                        <option value="0">Select a Team</option>
-                        <optgroup label="AFC East">
-                            <option value="1">Buffalo Bills</option>
-                            <option value="2">Miami Dolphins</option>
-                            <option value="3">New England Patriots</option>
-                            <option value="4">New York Jets</option>
-                        </optgroup>
-                        <optgroup label="AFC West">
-                            <option value="5">Denver Broncos</option>
-                            <option value="6">Kansas City Chiefs</option>
-                            <option value="7">Los Angeles Chargers</option>
-                            <option value="8">Oakland Raiders</option>
-                        </optgroup>
-                        <optgroup label="AFC North">
-                            <option value="9">Baltimore Ravens</option>
-                            <option value="10">Cincinnati Bengals</option>
-                            <option value="11">Cleveland Browns</option>
-                            <option value="12">Pittsburgh Steelers</option>
-                        </optgroup>
-                        <optgroup label="AFC South">
-                            <option value="13">Houston Texans</option>
-                            <option value="14">Indianapolis Colts</option>
-                            <option value="15">Jacksonville Jaguars</option>
-                            <option value="16">Tennessee Titans</option>
-                        </optgroup>
-                        <optgroup label="NFC East">
-                            <option value="17">Dallas Cowboys</option>
-                            <option value="18">New York Giants</option>
-                            <option value="19">Philadelphia Eagles</option>
-                            <option value="20">Washington Redskins</option>
-                        </optgroup>
-                        <optgroup label="NFC West">
-                            <option value="21">Arizona Cardinals</option>
-                            <option value="22">Los Angeles Rams</option>
-                            <option value="23">San Francisco 49ers</option>
-                            <option value="24">Minnesota Vikings</option>
-                        </optgroup>
-                        <optgroup label="NFC South">
-                            <option value="25">Atlanta Falcons</option>
-                            <option value="26">Carolina Panthers</option>
-                            <option value="27">New Orleans Saints</option>
-                            <option value="28">Tampa Bay Buccaneers</option>
-                        </optgroup>
-                        <optgroup label="NFC North">
-                                <option value="29">Chicago Bears</option>
-                                <option value="30">Detroit Lions</option>
-                                <option value="31">Green Bay Packers</option>
-                                <option value="32">Minnesota Vikings</option>
-                            </optgroup>
-                    </select>
+                    <option value="0">Select a Team</option>
+                    <optgroup label="AFC East">
+                        <option value="1">Buffalo Bills</option>
+                        <option value="2">Miami Dolphins</option>
+                        <option value="3">New England Patriots</option>
+                        <option value="4">New York Jets</option>
+                    </optgroup>
+                    <optgroup label="AFC West">
+                        <option value="5">Denver Broncos</option>
+                        <option value="6">Kansas City Chiefs</option>
+                        <option value="7">Los Angeles Chargers</option>
+                        <option value="8">Oakland Raiders</option>
+                    </optgroup>
+                    <optgroup label="AFC North">
+                        <option value="9">Baltimore Ravens</option>
+                        <option value="10">Cincinnati Bengals</option>
+                        <option value="11">Cleveland Browns</option>
+                        <option value="12">Pittsburgh Steelers</option>
+                    </optgroup>
+                    <optgroup label="AFC South">
+                        <option value="13">Houston Texans</option>
+                        <option value="14">Indianapolis Colts</option>
+                        <option value="15">Jacksonville Jaguars</option>
+                        <option value="16">Tennessee Titans</option>
+                    </optgroup>
+                    <optgroup label="NFC East">
+                        <option value="17">Dallas Cowboys</option>
+                        <option value="18">New York Giants</option>
+                        <option value="19">Philadelphia Eagles</option>
+                        <option value="20">Washington Redskins</option>
+                    </optgroup>
+                    <optgroup label="NFC West">
+                        <option value="21">Arizona Cardinals</option>
+                        <option value="22">Los Angeles Rams</option>
+                        <option value="23">San Francisco 49ers</option>
+                        <option value="24">Minnesota Vikings</option>
+                    </optgroup>
+                    <optgroup label="NFC South">
+                        <option value="25">Atlanta Falcons</option>
+                        <option value="26">Carolina Panthers</option>
+                        <option value="27">New Orleans Saints</option>
+                        <option value="28">Tampa Bay Buccaneers</option>
+                    </optgroup>
+                    <optgroup label="NFC North">
+                        <option value="29">Chicago Bears</option>
+                        <option value="30">Detroit Lions</option>
+                        <option value="31">Green Bay Packers</option>
+                        <option value="32">Minnesota Vikings</option>
+                    </optgroup>
+                </select>
+                <br><br><br>
+                <a class="waves-effect waves-light btn-large" id="teamButtonNFL">Add Team</a>
+           
 
             </div>
             <!-- NATIONALY HOCKEY LEAGUE-->
             <div id="NHL">
-                <img src="../html/logos/nhlLogo.png" alt="National Hockey League" id="nhlLogo">
+                <img src="/Users/olympiacassidy/Desktop/logos/nhlLogo.png" alt="National Hockey League" id="nhlLogo">
 
                 <br>
                 <select class="browser-default" id="teamChoiceNHL">
-                        <option value="0">Select a Team</option>
-                        <optgroup label="Atlantic Division">
-                            <option value="33">Boston Bruins</option>
-                            <option value="34">Buffalo Sabres</option>
-                            <option value="35">Detroit Red Wings</option>
-                            <option value="36">Florida Panthers</option>
-                            <option value="37">Montreal Canadiens</option>
-                            <option value="38">Ottawa Senators</option>
-                            <option value="39">Tampa Bay Lightning</option>
-                            <option value="40">Toronto Maple Leafs</option>
-                        </optgroup>
-                        <optgroup label="Metropolitan Division">
-                            <option value="41">Carolina Hurricanes</option>
-                            <option value="42">Columbus Blue Jackets</option>
-                            <option value="43">New Jersey Devils</option>
-                            <option value="44">New York Islanders</option>
-                            <option value="45">New York Rangers</option>
-                            <option value="46">Philadelphia Flyers</option>
-                            <option value="47">Pittsburgh Penguins</option>
-                            <option value="48">Washington Capitals </option>
-                        </optgroup>
-                        <optgroup label="Central Division">
-                            <option value="49">Chicago Blackhawks</option>
-                            <option value="50">Colorado Avalanche</option>
-                            <option value="51">Dallas Stars</option>
-                            <option value="52">Minnesota Wild</option>
-                            <option value="53">Nashville Predators</option>
-                            <option value="54">St. Louis Blues</option>
-                            <option value="55">Winnipeg Jets</option>
-                        </optgroup>
-                        <optgroup label="Pacific Division">
-                            <option value="56">Anaheim Ducks</option>
-                            <option value="57">Arizona Coyotes</option>
-                            <option value="58">Calgary Flames</option>
-                            <option value="59">Edmonton Oilers</option>
-                            <option value="60">Los Angeles Kings</option>
-                            <option value="61">San Jose Sharks</option>
-                            <option value="62">Vancouver Canucks</option>
-                            <option value="63">Vegas Golden Knights</option>
-                        </optgroup>
-                    </select>
+                    <option value="0">Select a Team</option>
+                    <optgroup label="Atlantic Division">
+                        <option value="33">Boston Bruins</option>
+                        <option value="34">Buffalo Sabres</option>
+                        <option value="35">Detroit Red Wings</option>
+                        <option value="36">Florida Panthers</option>
+                        <option value="37">Montreal Canadiens</option>
+                        <option value="38">Ottawa Senators</option>
+                        <option value="39">Tampa Bay Lightning</option>
+                        <option value="40">Toronto Maple Leafs</option>
+                    </optgroup>
+                    <optgroup label="Metropolitan Division">
+                        <option value="41">Carolina Hurricanes</option>
+                        <option value="42">Columbus Blue Jackets</option>
+                        <option value="43">New Jersey Devils</option>
+                        <option value="44">New York Islanders</option>
+                        <option value="45">New York Rangers</option>
+                        <option value="46">Philadelphia Flyers</option>
+                        <option value="47">Pittsburgh Penguins</option>
+                        <option value="48">Washington Capitals </option>
+                    </optgroup>
+                    <optgroup label="Central Division">
+                        <option value="49">Chicago Blackhawks</option>
+                        <option value="50">Colorado Avalanche</option>
+                        <option value="51">Dallas Stars</option>
+                        <option value="52">Minnesota Wild</option>
+                        <option value="53">Nashville Predators</option>
+                        <option value="54">St. Louis Blues</option>
+                        <option value="55">Winnipeg Jets</option>
+                    </optgroup>
+                    <optgroup label="Pacific Division">
+                        <option value="56">Anaheim Ducks</option>
+                        <option value="57">Arizona Coyotes</option>
+                        <option value="58">Calgary Flames</option>
+                        <option value="59">Edmonton Oilers</option>
+                        <option value="60">Los Angeles Kings</option>
+                        <option value="61">San Jose Sharks</option>
+                        <option value="62">Vancouver Canucks</option>
+                        <option value="63">Vegas Golden Knights</option>
+                    </optgroup>
+                </select>
+                <br><br><br>
+                <a class="waves-effect waves-light btn-large" id="teamButtonNHL">Add Team</a>
+           
 
             </div>
 
 
             <!-- NATIONAL BASKETBALL ASSOCIATION-->
             <div id="NBA">
-                <img src="../html/logos/nbaLogo.png" alt="National Basketball Association" id="nbaLogo">
+                <img src="/Users/olympiacassidy/Desktop/logos/nbaLogo.png" alt="National Basketball Association" id="nbaLogo">
 
                 <br>
                 <select class="browser-default" id="teamChoiceNBA">
-                        <option value="0">Select a Team</option>
-                        <optgroup label="Atlantic Division">
-                            <option value="64">Boston Celtics</option>
-                            <option value="65">Brooklyn Nets</option>
-                            <option value="66">New York Knicks</option>
-                            <option value="67">Philadelphia 76ers</option>
-                            <option value="68">Toronto Raptors</option>
-                        </optgroup>
-                        <optgroup label="Central Division">
-                            <option value="69">Chicago Bulls</option>
-                            <option value="70">Cleveland Cavaliers</option>
-                            <option value="71">Detroit Pistons</option>
-                            <option value="72">Indiana Pacers</option>
-                            <option value="73">Milwaukee Bucks</option>
-                        </optgroup>
-                        <optgroup label="Southeast Division">
-                            <option value="74">Atlanta Hawks</option>
-                            <option value="75">Charlotte Hornets</option>
-                            <option value="76">Miami Heat</option>
-                            <option value="77">Orlando Magic</option>
-                            <option value="78">Washington Wizards</option>
-                        </optgroup>
-                        <optgroup label="Northwest Division">
-                            <option value="79">Denver Nuggets</option>
-                            <option value="80">Minnesota Timberwolves</option>
-                            <option value="81">Oklahoma City Thunder</option>
-                            <option value="82">Portland Trail Blazers</option>
-                            <option value="83">Utah Jazz</option>
-                        </optgroup>
-                        <optgroup label="Pacific Division">
-                            <option value="84">Golden State Warriors</option>
-                            <option value="85">LA Clippers</option>
-                            <option value="86">Los Angeles Lakers</option>
-                            <option value="87">Phoenix Suns</option>
-                            <option value="88">Sacramento Kings</option>
-                        </optgroup>
-                        <optgroup label="Southwest Division">
-                            <option value="89">Dallas Mavericks</option>
-                            <option value="90">Houston Rockets</option>
-                            <option value="91">Memphis Grizzlies</option>
-                            <option value="92">New Orleans Pelicans</option>
-                            <option value="93">San Antonio Spurs</option>
-                        </optgroup>
-                    </select>
-
+                    <option value="0">Select a Team</option>
+                    <optgroup label="Atlantic Division">
+                        <option value="64">Boston Celtics</option>
+                        <option value="65">Brooklyn Nets</option>
+                        <option value="66">New York Knicks</option>
+                        <option value="67">Philadelphia 76ers</option>
+                        <option value="68">Toronto Raptors</option>
+                    </optgroup>
+                    <optgroup label="Central Division">
+                        <option value="69">Chicago Bulls</option>
+                        <option value="70">Cleveland Cavaliers</option>
+                        <option value="71">Detroit Pistons</option>
+                        <option value="72">Indiana Pacers</option>
+                        <option value="73">Milwaukee Bucks</option>
+                    </optgroup>
+                    <optgroup label="Southeast Division">
+                        <option value="74">Atlanta Hawks</option>
+                        <option value="75">Charlotte Hornets</option>
+                        <option value="76">Miami Heat</option>
+                        <option value="77">Orlando Magic</option>
+                        <option value="78">Washington Wizards</option>
+                    </optgroup>
+                    <optgroup label="Northwest Division">
+                        <option value="79">Denver Nuggets</option>
+                        <option value="80">Minnesota Timberwolves</option>
+                        <option value="81">Oklahoma City Thunder</option>
+                        <option value="82">Portland Trail Blazers</option>
+                        <option value="83">Utah Jazz</option>
+                    </optgroup>
+                    <optgroup label="Pacific Division">
+                        <option value="84">Golden State Warriors</option>
+                        <option value="85">LA Clippers</option>
+                        <option value="86">Los Angeles Lakers</option>
+                        <option value="87">Phoenix Suns</option>
+                        <option value="88">Sacramento Kings</option>
+                    </optgroup>
+                    <optgroup label="Southwest Division">
+                        <option value="89">Dallas Mavericks</option>
+                        <option value="90">Houston Rockets</option>
+                        <option value="91">Memphis Grizzlies</option>
+                        <option value="92">New Orleans Pelicans</option>
+                        <option value="93">San Antonio Spurs</option>
+                    </optgroup>
+                </select>
+                <br><br><br>
+                <a class="waves-effect waves-light btn-large" id="teamButtonNBA">Add Team</a>
             </div>
 
             <!-- MAJOR LEAGUE BASEBALL-->
             <div id="MLB">
-                <img src="../html/logos/mlbLogo.png" alt="Major League Baseball" id="mlbLogo">
+                <img src="/Users/olympiacassidy/Desktop/logos/mlb.png" alt="Major League Baseball" id="mlbLogo">
 
                 <br>
                 <select class="browser-default" id="teamChoiceMLB">
-                        <option value="0">Select a Team</option>
-                        <optgroup label="AL East">
-                            <option value="1">Baltimore Orioles</option>
-                            <option value="2">Boston Red Sox</option>
-                            <option value="3">New York Yankees</option>
-                            <option value="4">Tampa Bay Rays</option>
-                            <option value="4">Toronto Blue Jays</option>
-                        </optgroup>
-                        <optgroup label="AL Central">
-                            <option value="5">Chicago White Sox</option>
-                            <option value="6">Cleveland Indians</option>
-                            <option value="7">Detriot Tigers</option>
-                            <option value="8">Kansas City Royals</option>
-                            <option value="4">Minnesota Twins</option>
-                        </optgroup>
-                        <optgroup label="AL West">
-                            <option value="5">Houston Astros</option>
-                            <option value="6">Los Angeles Angels</option>
-                            <option value="7">Oakland Athletics</option>
-                            <option value="8">Seattle Mariners</option>
-                            <option value="4">Texas Rangers</option>
-                        </optgroup>
-                        <optgroup label="AFC South">
-                            <option value="5">Houston Texans</option>
-                            <option value="6">Indianapolis Colts</option>
-                            <option value="7">Jacksonville Jaguars</option>
-                            <option value="8">Tennessee Titans</option>
-                        </optgroup>
-                        <optgroup label="NL East">
-                            <option value="9">Atlanta Braves</option>
-                            <option value="10">Miami Marlins</option>
-                            <option value="11">New York Mets</option>
-                            <option value="12">Philadelphia Phillies</option>
-                            <option value="12">Washington Nationals</option>
-                        </optgroup>
-                        <optgroup label="NL Central">
-                            <option value="13">Chicago Cubs</option>
-                            <option value="14">Cincinnati Reds</option>
-                            <option value="15">Milwaukee Brewers</option>
-                            <option value="16">Pittsburgh Pirates</option>
-                            <option value="12">St. Louis Cardinals</option>
-                        </optgroup>
-                        <optgroup label="NL West">
-                            <option value="17">Arizona Diamondbacks</option>
-                            <option value="18">Colorado Rockies</option>
-                            <option value="19">Los Angeles Dodgers</option>
-                            <option value="20">San Diego Padres</option>
-                            <option value="12">San Francisco Giants</option>
-                        </optgroup>
-                    </select>
+                    <option value="0">Select a Team</option>
+                    <optgroup label="AL East">
+                        <option value="1">Baltimore Orioles</option>
+                        <option value="2">Boston Red Sox</option>
+                        <option value="3">New York Yankees</option>
+                        <option value="4">Tampa Bay Rays</option>
+                        <option value="4">Toronto Blue Jays</option>
+                    </optgroup>
+                    <optgroup label="AL Central">
+                        <option value="5">Chicago White Sox</option>
+                        <option value="6">Cleveland Indians</option>
+                        <option value="7">Detriot Tigers</option>
+                        <option value="8">Kansas City Royals</option>
+                        <option value="4">Minnesota Twins</option>
+                    </optgroup>
+                    <optgroup label="AL West">
+                        <option value="5">Houston Astros</option>
+                        <option value="6">Los Angeles Angels</option>
+                        <option value="7">Oakland Athletics</option>
+                        <option value="8">Seattle Mariners</option>
+                        <option value="4">Texas Rangers</option>
+                    </optgroup>
+                    <optgroup label="AFC South">
+                        <option value="5">Houston Texans</option>
+                        <option value="6">Indianapolis Colts</option>
+                        <option value="7">Jacksonville Jaguars</option>
+                        <option value="8">Tennessee Titans</option>
+                    </optgroup>
+                    <optgroup label="NL East">
+                        <option value="9">Atlanta Braves</option>
+                        <option value="10">Miami Marlins</option>
+                        <option value="11">New York Mets</option>
+                        <option value="12">Philadelphia Phillies</option>
+                        <option value="12">Washington Nationals</option>
+                    </optgroup>
+                    <optgroup label="NL Central">
+                        <option value="13">Chicago Cubs</option>
+                        <option value="14">Cincinnati Reds</option>
+                        <option value="15">Milwaukee Brewers</option>
+                        <option value="16">Pittsburgh Pirates</option>
+                        <option value="12">St. Louis Cardinals</option>
+                    </optgroup>
+                    <optgroup label="NL West">
+                        <option value="17">Arizona Diamondbacks</option>
+                        <option value="18">Colorado Rockies</option>
+                        <option value="19">Los Angeles Dodgers</option>
+                        <option value="20">San Diego Padres</option>
+                        <option value="12">San Francisco Giants</option>
+                    </optgroup>
+                </select>
 
-                <br><br><br><br><br><br>
-                <a class="waves-effect waves-light btn-large">Button</a>
+                <br><br><br>
+                <a class="waves-effect waves-light btn-large" id="teamButtonMLB">Add Team</a>
             </div>
 
 
 
         </div>
 
+    </div>
+
+
+    <div id="info">
+        <!-- spacing-->
+        <div id="spacing">
+        </div>
+
+        <!-- schedule-->
+        <div id="schedule">
+            <h2> Schedule </h2>
+        </div>
+
+        <!-- spacing-->
+        <div id="spacing">
+        </div>
+
+        <!-- roster-->
+        <div id="roster">
+            <h2> Roster</h2>
+        </div>
+
+        <!-- spacing-->
+        <div id="spacing">
+        </div>
+
+        <!-- standings-->
+        <div id="standings">
+            <h2> Standings</h2>
+        </div>
+
+    </div>
 
 
 
 
 
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="../js/index.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
 </body>
 
 </html>
