@@ -7,19 +7,14 @@ $(document).ready(function () {
 
     let teamIds = [];
 
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
 
-    today = yyyy + '-' + mm + '-' + dd;
 
     const nflId = "4391"
     const mlbId = "4424"
     const nhlId = "4380"
     const nbaId = "4387"
 
-    const todaysEvents = "https://www.thesportsdb.com/api/v1/json/1/eventstv.php?d=" + today + "&a=United%20States"
+    const upcomingEvents = "https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=" + nflId
 
     const NhlStandingsURL = "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=" + nhlId + "&s=1920"
     const NflStandingsURL = "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=" + nflId + "&s=1718"
@@ -992,19 +987,18 @@ $(document).ready(function () {
     function getTodaysEvents() {
 
         $.ajax({
-            url: todaysEvents,
+            url: upcomingEvents,
             method: "GET"
         })
             .then(function (response) {
 
-                response.tvevents.forEach(element => {
+                response.events.forEach(element => {
 
                     let teamDiv = $("<div>")
                         .attr("class", "standings")
-                        .append($("<h4>").text("Sport: " + element.strSport).addClass("text-center"))
-                        .append($("<p>").text("Event: " + element.strEvent))
+                        .append($("<h4>").text(element.strEvent))
                         .append($("<p>").text("Time: " + element.strTime))
-                        .append($("<p>").text("Channel: " + element.strChannel));
+                        .append($("<p>").text("date: " + element.dateEvent));
 
 
                     todaysDiv.append(teamDiv);
