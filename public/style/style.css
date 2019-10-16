@@ -1,176 +1,173 @@
-body,html {
+body,
+html {
     background-color: lightgrey;
 }
+
 #logo {
-  height: 200px;
-  width: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    height: 200px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-  #narrow {
+#narrow {
     height: 100vh;
-    float: left ;
+    float: left;
     width: 20%;
-    background:#097100;
+    background: #097100;
     display: block;
-  }
-  #wide {
+}
+
+#wide {
     background-size: 100%;
     float: right;
     width: 79%;
     background: lightgrey;
     margin-bottom: 50px;
-  }
+}
 
-
-
-  #NFL {
+#NFL {
     height: 100%;
     float: left;
     width: 25%;
     background: lightgrey;
-  }
+}
 
-  #nflLogo {
+#nflLogo {
     height: 200px;
     align-content: center;
+}
 
-  }
-
-  #nhlLogo {
+#nhlLogo {
     height: 200px;
+}
 
-  }
-
-  #NHL {
+#NHL {
     height: 100%;
     float: left;
     width: 25%;
     background: lightgrey;
-  }
+}
 
-  #NBA {
+#NBA {
     height: 100%;
     float: left;
     width: 25%;
     background: lightgrey;
-  }
+}
 
-  #nbaLogo {
+#nbaLogo {
     height: 200px;
+}
 
-  }
-
-  #MLB {
+#MLB {
     height: 100%;
     float: left;
     width: 25%;
     background: lightgrey;
-  }
+}
 
-  #mlbLogo {
+#mlbLogo {
     height: 200px;
     text-align: center;
+}
 
-  }
-
-#favTeam {
-  color: white;
+#todaysEvents {
+    color: white;
+    overflow: scroll;
 }
 
 h1 {
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
 }
+
 h2 {
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-#info
-{
-  margin: 30px, 30px;
+#info {
+    margin: 30px, 30px;
 }
-
 
 #roster {
-  height: 100%;
-  margin: auto;
-  float: left;
-  width: 24%;
-  background: white;
-  border: 5px solid #097100;
-  border-radius: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
+    height: 100%;
+    margin: auto;
+    float: left;
+    width: 24%;
+    background: white;
+    border: 5px solid #097100;
+    border-radius: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #schedule {
-  height: 100%;
-  float: left;
-  width: 24%;
-  background: white;
-  border: 5px solid #097100;
-  border-radius: 30px;
+    height: 100%;
+    float: left;
+    width: 24%;
+    background: white;
+    border: 5px solid #097100;
+    border-radius: 30px;
 }
 
 #standings {
-  height: 100%;
-  float: left;
-  width: 24%;
-  background: white;
-  border: 5px solid #097100;
-  border-radius: 30px;
+    height: 100%;
+    float: left;
+    width: 24%;
+    background: white;
+    border: 5px solid #097100;
+    border-radius: 30px;
 }
 
 #spacing {
-  float: left;
-  padding: 10px;
+    float: left;
+    padding: 10px;
 }
-
 
 #header {
-  background-image: url("/Users/olympiacassidy/Desktop/logos/Screen Shot 2019-10-14 at 7.41.49 PM.png");
-  background-size: cover;
+    background-image: url("../html/logos/background.png");
+    background-size: cover;
 }
+
 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #mlbBtn {
-  background-color:#097100;
-  width: 140px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    background-color: #097100;
+    width: 140px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #nhlBtn {
-  background-color:#097100;
-  width: 140px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    background-color: #097100;
+    width: 140px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #nflBtn {
-  background-color:#097100;
-  width: 140px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    background-color: #097100;
+    width: 140px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #nbaBtn {
-  background-color:#097100;
-  width: 140px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    background-color: #097100;
+    width: 140px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

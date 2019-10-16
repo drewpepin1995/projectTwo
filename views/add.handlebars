@@ -1,0 +1,24 @@
+<section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Add A Smack</h1>
+      <p>This is where fans can anonymously talk smack about opposing teams or players!</p>
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form action="/smack/add" method="POST">
+        <div class="input-group">
+          <label for="title">Your favorite team</label>
+          <input type="text" name="team" id="team" class="input-box" placeholder="eg. New England Patriots, Boston Bruins, Boston Celtics"
+            maxlength="100" value={{team}}>
+        </div>
+        <div class="input-group">
+          <label for="description">Smack Talk</label>
+          <textarea name="smack" id="smack" class="input-box" placeholder="Talk some smack about an opposing team!"
+            rows="10">{{smack}}</textarea>
+        </div>
+        <input type="submit" value="Add smack" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>

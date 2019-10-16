@@ -15,7 +15,10 @@ var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', require("./routes/htmlRoutes"))
+app.use('/smack', require("./routes/apiRoutes"))
 
 app.engine(
     "handlebars",
@@ -23,13 +26,18 @@ app.engine(
         defaultLayout: "main"
     })
 );
+
+
 app.set("view engine", "handlebars");
 
-app.listen(PORT, function () {
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+
+app.listen(PORT, function() {
     console.log(
         "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
         PORT,
         PORT
     );
 });
-

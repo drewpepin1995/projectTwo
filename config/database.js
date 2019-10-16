@@ -3,6 +3,9 @@ module.exports =
     db = new Sequelize('sports.db', 'root', 'hockey930', {
         host: 'localhost',
         dialect: 'mysql',
+        define: {
+            timestamps: false
+        },
 
         pool: {
             max: 5,
