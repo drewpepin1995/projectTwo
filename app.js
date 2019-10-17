@@ -1,13 +1,14 @@
+require("dotenv").config();
 const express = require("express")
 const exphbs = require("express-handlebars")
 const bodyParser = require("body-parser")
 const path = require("path")
 
-const db = require("./config/database")
+const db = require("./models")
 
-db.authenticate()
+/* db.authenticate()
     .then(() => console.log("database connected"))
-    .catch(err => console.log("Error: " + err))
+    .catch(err => console.log("Error: " + err)) */
 
 const app = express();
 
@@ -34,10 +35,8 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-app.listen(PORT, function() {
-    console.log(
-        "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-        PORT,
-        PORT
-    );
+db.sequelize.sync({ force: true }).then(function() {
+    app.listen(PORT, function() {
+        console.log("App listening on PORT " + PORT);
+    });
 });
