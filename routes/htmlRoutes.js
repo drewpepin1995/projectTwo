@@ -1,19 +1,23 @@
 const express = require('express');
 const router = express.Router();
-
+const db = require('../models/smack');
 
 router.get("/", function (req, res) {
+    console.log(db);
     res.render("index", { layout: 'landing' })
 });
 
 router.get('/smack', (req, res) =>
-    Smack.findAll()
+    db.findAll()
         .then(smacks => {
             res.render('smacks', {
                 smacks
             });
+
         })
         .catch(err => console.log("error: " + err)));
+
+
 
 
 module.exports = router
