@@ -4,18 +4,6 @@ const db = require('../config/database');
 const Smack = require("../models/smack")
 
 
-// Get smack list
-router.get('/', (req, res) => 
-    Smack.findAll()
-    .then(smacks => 
-        {
-            res.render('smacks', {
-                smacks
-            });
-    })
-    .catch(err => console.log("error: " + err)));
-
-
 // Display add a smack form
 router.get('/add', (req, res) => res.render('add'));
 
