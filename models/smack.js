@@ -1,17 +1,17 @@
-const Sequelize = require("sequelize")
-const db = require("../config/database")
+module.exports = function(sequelize, DataTypes) {
 
-const Smack = db.define('smack', {
-    id: {
-        type: Sequelize.INTEGER,
-        primaryKey: true
-    },
-    team: {
-        type: Sequelize.STRING
-    },
-    smack: {
-        type: Sequelize.TEXT
-    }
-});
+    const Smack = sequelize.define('smack', {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true
+        },
+        team: {
+            type: DataTypes.STRING
+        },
+        smack: {
+            type: DataTypes.TEXT
+        }
+    });
 
-module.exports = Smack;
+    return Smack;
+}
