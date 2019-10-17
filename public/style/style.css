@@ -6,16 +6,25 @@ html {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Crimson Text', serif;
    }
+<<<<<<< HEAD
 
    .nav-wrapper {
        background-color: lightgrey;
    }
 
+=======
+   .nav-wrapper {
+       background-color: lightgrey;
+   }
+>>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
    nav ul li a{
     color: black;
   }
  
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
 #logo {
     height: 200px;
     width: auto;
@@ -23,9 +32,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: auto;
     margin-right: auto;
 }
-
 #narrow {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
     float: left;
     width: 20%;
     background: #097100;
@@ -33,7 +44,6 @@ h1, h2, h3, h4, h5, h6 {
     overflow-y:auto;
     max-height: 1150px;
 }
-
 #wide {
     background-size: 100%;
     float: right;
@@ -41,74 +51,65 @@ h1, h2, h3, h4, h5, h6 {
     background: lightgrey;
     margin-bottom: 50px;
 }
-
 #NFL {
     height: 100%;
     float: left;
     width: 25%;
     background: lightgrey;
 }
-
 #nflLogo {
     height: 200px;
     align-content: center;
 }
-
 #nhlLogo {
     height: 200px;
 }
-
 #NHL {
     height: 100%;
     float: left;
     width: 25%;
     background: lightgrey;
 }
-
 #NBA {
     height: 100%;
     float: left;
     width: 25%;
     background: lightgrey;
 }
-
 #nbaLogo {
     height: 200px;
 }
-
 #MLB {
     height: 100%;
     float: left;
     width: 25%;
     background: lightgrey;
 }
-
 #mlbLogo {
     height: 200px;
     text-align: center;
 }
-
 #todaysEvents {
     color: white;
     overflow: scroll;
 }
-
 h1 {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
 }
-
 h2 {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
 }
-
 #info {
     margin: 30px, 30px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
 #roster, #schedule, #standings {
     max-height: 700px;
     height: 100%;
@@ -121,26 +122,31 @@ h2 {
     padding-left: 10px;
     padding-right: 10px;
     overflow-y:auto;
+<<<<<<< HEAD
 
 }
 
 
+=======
+}
+>>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
 #spacing {
     float: left;
     padding: 10px;
 }
-
 #header {
     background-image: url("../html/logos/background.png");
     background-size: cover;
 }
-
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
 #teamButtonNFL, #teamButtonNHL, #teamButtonNBA, #teamButtonMLB {
     background-color: #097100;
     width: 140px;
@@ -148,3 +154,10 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
