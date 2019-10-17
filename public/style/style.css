@@ -1,7 +1,20 @@
 body,
 html {
     background-color: lightgrey;
+    font-family: 'Work Sans', sans-serif;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Text', serif;
+   }
+
+   .nav-wrapper {
+       background-color: lightgrey;
+   }
+
+   nav ul li a{
+    color: black;
+  }
+ 
 
 #logo {
     height: 200px;
@@ -12,11 +25,13 @@ html {
 }
 
 #narrow {
-    height: 100vh;
+
     float: left;
     width: 20%;
     background: #097100;
     display: block;
+    overflow-y:auto;
+    max-height: 1150px;
 }
 
 #wide {
@@ -94,7 +109,8 @@ h2 {
     margin: 30px, 30px;
 }
 
-#roster {
+#roster, #schedule, #standings {
+    max-height: 700px;
     height: 100%;
     margin: auto;
     float: left;
@@ -104,25 +120,10 @@ h2 {
     border-radius: 30px;
     padding-left: 10px;
     padding-right: 10px;
+    overflow-y:auto;
+
 }
 
-#schedule {
-    height: 100%;
-    float: left;
-    width: 24%;
-    background: white;
-    border: 5px solid #097100;
-    border-radius: 30px;
-}
-
-#standings {
-    height: 100%;
-    float: left;
-    width: 24%;
-    background: white;
-    border: 5px solid #097100;
-    border-radius: 30px;
-}
 
 #spacing {
     float: left;
@@ -140,31 +141,7 @@ img {
     margin-right: auto;
 }
 
-#mlbBtn {
-    background-color: #097100;
-    width: 140px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#nhlBtn {
-    background-color: #097100;
-    width: 140px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#nflBtn {
-    background-color: #097100;
-    width: 140px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#nbaBtn {
+#teamButtonNFL, #teamButtonNHL, #teamButtonNBA, #teamButtonMLB {
     background-color: #097100;
     width: 140px;
     display: block;
