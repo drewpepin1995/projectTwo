@@ -1,6 +1,6 @@
+require('dotenv').config()
 const Sequelize = require("sequelize")
 let db;
-
 if (process.env.NODE_ENV != "production") {
     db = new Sequelize('sports.db', 'root', 'hockey930', {
     host: 'localhost',
