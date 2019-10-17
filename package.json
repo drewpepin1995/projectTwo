@@ -1,37 +1,4 @@
 {
-<<<<<<< HEAD
-    "name": "projecttwo",
-    "version": "1.0.0",
-    "description": "world famous sports app",
-    "main": "app.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/drewpepin1995/projectTwo.git"
-    },
-    "author": "Drew Pepin",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/drewpepin1995/projectTwo/issues"
-    },
-    "homepage": "https://github.com/drewpepin1995/projectTwo#readme",
-    "dependencies": {
-        "axios": "^0.19.0",
-        "body": "^5.1.0",
-        "body-parser": "^1.19.0",
-        "dotenv": "^8.2.0",
-        "express": "^4.17.1",
-        "express-handlebars": "^3.1.0",
-        "handlebars": "^4.4.3",
-        "mysql2": "^1.7.0",
-        "parser": "^0.1.4",
-        "path": "^0.12.7",
-        "sequelize": "^5.19.6"
-    }
-}
-=======
   "name": "projecttwo",
   "version": "1.0.0",
   "description": "world famous sports app",
@@ -62,4 +29,3 @@
     "sequelize": "^5.19.6"
   }
 }
->>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4

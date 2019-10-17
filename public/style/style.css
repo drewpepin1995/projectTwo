@@ -6,25 +6,15 @@ html {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Crimson Text', serif;
    }
-<<<<<<< HEAD
 
    .nav-wrapper {
        background-color: lightgrey;
    }
 
-=======
-   .nav-wrapper {
-       background-color: lightgrey;
-   }
->>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
    nav ul li a{
     color: black;
   }
  
-<<<<<<< HEAD
-
-=======
->>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
 #logo {
     height: 200px;
     width: auto;
@@ -33,10 +23,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
 }
 #narrow {
-<<<<<<< HEAD
-
-=======
->>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
     float: left;
     width: 20%;
     background: #097100;
@@ -106,10 +92,6 @@ h2 {
 #info {
     margin: 30px, 30px;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
 #roster, #schedule, #standings {
     max-height: 700px;
     height: 100%;
@@ -122,14 +104,7 @@ h2 {
     padding-left: 10px;
     padding-right: 10px;
     overflow-y:auto;
-<<<<<<< HEAD
-
 }
-
-
-=======
-}
->>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
 #spacing {
     float: left;
     padding: 10px;
@@ -143,21 +118,14 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
-#teamButtonNFL, #teamButtonNHL, #teamButtonNBA, #teamButtonMLB {
+#teamButtonNFL, #teamButtonNHL, #teamButtonNBA, #teamButtonMLB, #addSmackBtn {
     background-color: #097100;
     width: 140px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 9361c7fefa968aa06af6f6404d609467e2ca42e4
