@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require("./routes/htmlRoutes"))
-app.use('/smack', require("./routes/apiRoutes"))
+app.use('/api', require("./routes/apiRoutes"))
 
 app.engine(
     "handlebars",
