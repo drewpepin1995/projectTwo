@@ -6,7 +6,7 @@ router.get("/", function (req, res) {
     res.render("index", { layout: 'landing' })
 });
 
-router.get('/', (req, res) =>
+router.get('/smack', (req, res) =>
     Smack.findAll()
         .then(smacks => {
             res.render('smacks', {
