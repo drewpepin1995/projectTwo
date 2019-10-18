@@ -490,7 +490,7 @@ $(document).ready(function () {
                     console.log("Points: " + element.total);
                     console.log("-------------------------")
 
-                    let teamDiv = $("<div>")
+                    let nhlStandingsDiv = $("<div>")
                         .attr("class", "standings")
                         .append($("<h3>").text(element.name).addClass("text-center"))
                         .append($("<p>").text("Goals For: " + element.goalsfor))
@@ -500,7 +500,7 @@ $(document).ready(function () {
                         .append($("<p>").text("Points: " + element.total));
 
 
-                    standingsDiv.append(teamDiv);
+                    standingsDiv.append(nhlStandingsDiv);
 
 
                 })
@@ -516,7 +516,7 @@ $(document).ready(function () {
 
         mlbStandings.table.forEach(element => {
 
-            let teamDiv = $("<div>")
+            let mlbStandingsDiv = $("<div>")
                 .attr("class", "standings")
                 .append($("<h3>").text(element.name).addClass("text-center"))
                 .append($("<p>").text("Runs For: " + element.goalsfor))
@@ -525,7 +525,7 @@ $(document).ready(function () {
                 .append($("<p>").text("Losses: " + element.loss));
 
 
-            standingsDiv.append(teamDiv);
+            standingsDiv.append(mlbStandingsDiv);
 
 
 
@@ -596,7 +596,20 @@ $(document).ready(function () {
 
     };
 
-    function getMlbTeamInfo() {
+    function getMlbSchedule() {
+
+        let teamDiv = $("<div>")
+            .attr("class", "standings")
+            .append($("<h3>").text("No upcoming games.").addClass("text-center"))
+            .append($("<p>").text("See you next season!"))
+
+
+        scheduleDiv.append(teamDiv);
+
+
+    };
+
+    function getMlbRoster() {
 
         let teamValue = $("#teamChoiceMLB option:selected").text().replace(/ /g, "_");
 
@@ -618,33 +631,6 @@ $(document).ready(function () {
 
                     teamIds.forEach(element => {
                         let teamId = element;
-                        queryTeamInfo = "https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=" + teamId;
-
-                        $.ajax({
-                            url: queryTeamInfo,
-                            method: "GET"
-                        })
-                            .then(function (response) {
-
-                                let teamDiv = $("<div>")
-                                    .attr("class", "standings")
-                                    .append($("<h3>").text("No upcoming games.").addClass("text-center"))
-                                    .append($("<p>").text("See you next season!"))
-
-
-                                scheduleDiv.append(teamDiv);
-
-                            });
-
-                    });
-
-
-
-                })
-                .then(function (promise) {
-
-                    teamIds.forEach(element => {
-                        let teamId = element;
                         queryTeamInfo = "https://www.thesportsdb.com/api/v1/json/1/lookup_all_players.php?id=" + teamId;
 
                         $.ajax({
@@ -657,14 +643,14 @@ $(document).ready(function () {
 
                                 response.player.forEach(element => {
 
-                                    let teamDiv = $("<div>")
+                                    let mlbRosterDiv = $("<div>")
                                         .attr("class", "standings")
                                         .append($("<h3>").text(element.strPlayer).addClass("text-center"))
                                         .append($("<p>").text("Date of Birth: " + element.dateBorn))
                                         .append($("<p>").text("Position: " + element.strPosition));
 
 
-                                    rosterDiv.append(teamDiv);
+                                    rosterDiv.append(mlbRosterDiv);
 
 
                                 })
@@ -678,7 +664,8 @@ $(document).ready(function () {
 
     };
 
-    function getNhlTeamInfo() {
+
+    function getNhlSchedule() {
 
         let teamValue = $("#teamChoiceNHL option:selected").text().replace(/ /g, "_");
 
@@ -711,7 +698,7 @@ $(document).ready(function () {
 
                                 scheduleDiv.append($("<h1>").text("Upcoming Games"))
 
-                                let teamDiv = $("<div>")
+                                let nhlScheduleDiv = $("<div>")
                                     .attr("class", "schedule")
                                     .append($("<h3>").text(response.events[0].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[0].strHomeTeam))
@@ -735,13 +722,33 @@ $(document).ready(function () {
                                     .append($("<p>").text("Date: " + response.events[4].dateEvent));
 
 
-                                scheduleDiv.append(teamDiv);
+                                scheduleDiv.append(nhlScheduleDiv);
 
                             });
 
                     });
 
 
+
+                })
+    };
+
+
+    function getNhlRoster() {
+        let teamValue = $("#teamChoiceNHL option:selected").text().replace(/ /g, "_");
+
+        teamURL = "https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=" + teamValue,
+
+            $.ajax({
+                url: teamURL,
+                method: "GET"
+            })
+                .then(function (response) {
+
+                    let Id = response.teams[0].idTeam;
+                    console.log(Id);
+                    teamIds.push(Id);
+                    console.log(teamIds);
 
                 })
                 .then(function (promise) {
@@ -760,14 +767,14 @@ $(document).ready(function () {
 
                                 response.player.forEach(element => {
 
-                                    let teamDiv = $("<div>")
+                                    let nhlRosterDiv = $("<div>")
                                         .attr("class", "standings")
                                         .append($("<h3>").text(element.strPlayer).addClass("text-center"))
                                         .append($("<p>").text("Date of Birth: " + element.dateBorn))
                                         .append($("<p>").text("Position: " + element.strPosition));
 
 
-                                    rosterDiv.append(teamDiv);
+                                    rosterDiv.append(nhlRosterDiv);
                                 })
                             });
 
@@ -779,7 +786,7 @@ $(document).ready(function () {
 
     };
 
-    function getNflTeamInfo() {
+    function getNflSchedule() {
 
         let teamValue = $("#teamChoiceNFL option:selected").text().replace(/ /g, "_");
 
@@ -811,7 +818,7 @@ $(document).ready(function () {
                         })
                             .then(function (response) {
 
-                                let teamDiv = $("<div>")
+                                let nflScheduleDiv = $("<div>")
                                     .attr("class", "schedule")
                                     .append($("<h3>").text(response.events[0].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[0].strHomeTeam))
@@ -840,7 +847,7 @@ $(document).ready(function () {
                                     .append($("<p>").text("Week: " + response.events[4].intRound));
 
 
-                                scheduleDiv.append(teamDiv);
+                                scheduleDiv.append(nflScheduleDiv);
 
 
                             });
@@ -848,6 +855,26 @@ $(document).ready(function () {
                     });
 
 
+
+                })
+    };
+
+    function getNflRoster() {
+
+        let teamValue = $("#teamChoiceNFL option:selected").text().replace(/ /g, "_");
+
+        teamURL = "https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=" + teamValue,
+
+            $.ajax({
+                url: teamURL,
+                method: "GET"
+            })
+                .then(function (response) {
+
+                    let Id = response.teams[0].idTeam;
+                    console.log(Id);
+                    teamIds.push(Id);
+                    console.log(teamIds);
 
                 })
                 .then(function (promise) {
@@ -866,14 +893,14 @@ $(document).ready(function () {
 
                                 response.player.forEach(element => {
 
-                                    let teamDiv = $("<div>")
+                                    let nflRosterDiv = $("<div>")
                                         .attr("class", "standings")
                                         .append($("<h3>").text(element.strPlayer).addClass("text-center"))
                                         .append($("<p>").text("Date of Birth: " + element.dateBorn))
                                         .append($("<p>").text("Position: " + element.strPosition));
 
 
-                                    rosterDiv.append(teamDiv);
+                                    rosterDiv.append(nflRosterDiv);
                                 })
                             });
 
@@ -885,7 +912,7 @@ $(document).ready(function () {
 
     };
 
-    function getNbaTeamInfo() {
+    function getNbaSchedule() {
 
         let teamValue = $("#teamChoiceNBA option:selected").text().replace(/ /g, "_");
 
@@ -917,7 +944,7 @@ $(document).ready(function () {
                         })
                             .then(function (response) {
 
-                                let teamDiv = $("<div>")
+                                let nbaScheduleDiv = $("<div>")
                                     .attr("class", "schedule")
                                     .append($("<h3>").text(response.events[0].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[0].strHomeTeam))
@@ -946,13 +973,32 @@ $(document).ready(function () {
                                     .append($("<p>").text("Week: " + response.events[4].intRound));
 
 
-                                scheduleDiv.append(teamDiv);
+                                scheduleDiv.append(nbaScheduleDiv);
 
                             });
 
                     });
 
 
+
+                })
+    };
+
+    function getNbaRoster() {
+        let teamValue = $("#teamChoiceNBA option:selected").text().replace(/ /g, "_");
+
+        teamURL = "https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=" + teamValue,
+
+            $.ajax({
+                url: teamURL,
+                method: "GET"
+            })
+                .then(function (response) {
+
+                    let Id = response.teams[0].idTeam;
+                    console.log(Id);
+                    teamIds.push(Id);
+                    console.log(teamIds);
 
                 })
                 .then(function (promise) {
@@ -971,14 +1017,14 @@ $(document).ready(function () {
 
                                 response.player.forEach(element => {
 
-                                    let teamDiv = $("<div>")
+                                    let nbaRosterDiv = $("<div>")
                                         .attr("class", "standings")
                                         .append($("<h3>").text(element.strPlayer).addClass("text-center"))
                                         .append($("<p>").text("Date of Birth: " + element.dateBorn))
                                         .append($("<p>").text("Position: " + element.strPosition));
 
 
-                                    rosterDiv.append(teamDiv);
+                                    rosterDiv.append(nbaRosterDiv);
                                 })
                             });
 
@@ -1024,8 +1070,10 @@ $(document).ready(function () {
     $("#teamButtonNBA").on("click", function () {
 
         $("#schedule, #standings, #roster").empty();
+        teamIds = [];
 
-        getNbaTeamInfo()
+        getNbaRoster();
+        getNbaSchedule();
         getNbaStandings()
 
 
@@ -1034,8 +1082,10 @@ $(document).ready(function () {
     $("#teamButtonNFL").on("click", function () {
 
         $("#schedule, #standings, #roster").empty();
+        teamIds = [];
 
-        getNflTeamInfo();
+        getNflRoster();
+        getNflSchedule();
         getNflStandings();
 
 
@@ -1045,7 +1095,9 @@ $(document).ready(function () {
 
         $("#schedule, #standings, #roster").empty();
 
-        getNhlTeamInfo();
+        teamIds = [];
+        getNhlRoster();
+        getNhlSchedule();
         getNhlStandings();
 
 
@@ -1055,7 +1107,9 @@ $(document).ready(function () {
 
         $("#schedule, #standings, #roster").empty();
 
-        getMlbTeamInfo();
+        teamIds = [];
+        getMlbRoster();
+        getMlbSchedule();
         getMlbStandings();
 
 

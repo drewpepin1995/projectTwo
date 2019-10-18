@@ -128,3 +128,6 @@ img {
 #allSmacks, #addSmack {
     border-bottom: 1px solid black;
 }
+nav {
+    margin-bottom: 1rem;
+}
