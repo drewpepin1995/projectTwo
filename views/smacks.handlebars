@@ -1,12 +1,12 @@
 <section id="gigs" class="container">
-    <h1>All Smacks</h1>
+    <h1 id="allSmacks">All Smacks</h1>
 
     {{#each smacks}}
-      <div class="gig">
-      <h3>{{team}}</h3>
+      <div class="gig" id="smacksDiv">
+      <h3 id="teamSmack">{{team}}</h3>
       <p>{{smack}}</p>
     {{else}}
-      <p>No smacks available</p>
+      <h2>No smacks available</h2>
     {{/each}}
     
   </section>

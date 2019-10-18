@@ -479,8 +479,10 @@ $(document).ready(function () {
         })
             .then(function (response) {
 
+                standingsDiv.append($("<h1>").text("Standings"))
+
                 response.table.forEach(element => {
-                    console.log("Team: " + element.name)
+                    console.log(element.name)
                     console.log("Goals For: " + element.goalsfor)
                     console.log("Goals Against: " + element.goalsagainst)
                     console.log("Wins: " + element.win)
@@ -490,7 +492,7 @@ $(document).ready(function () {
 
                     let teamDiv = $("<div>")
                         .attr("class", "standings")
-                        .append($("<h3>").text("Team: " + element.name).addClass("text-center"))
+                        .append($("<h3>").text(element.name).addClass("text-center"))
                         .append($("<p>").text("Goals For: " + element.goalsfor))
                         .append($("<p>").text("Goals Against: " + element.goalsagainst))
                         .append($("<p>").text("Wins: " + element.win))
@@ -510,11 +512,13 @@ $(document).ready(function () {
 
     function getMlbStandings() {
 
+        standingsDiv.append($("<h1>").text("Standings"))
+
         mlbStandings.table.forEach(element => {
 
             let teamDiv = $("<div>")
                 .attr("class", "standings")
-                .append($("<h3>").text("Team: " + element.name).addClass("text-center"))
+                .append($("<h3>").text(element.name).addClass("text-center"))
                 .append($("<p>").text("Runs For: " + element.goalsfor))
                 .append($("<p>").text("Runs Against: " + element.goalsagainst))
                 .append($("<p>").text("Wins: " + element.wins))
@@ -531,11 +535,13 @@ $(document).ready(function () {
 
     function getNflStandings() {
 
+        standingsDiv.append($("<h1>").text("Standings"))
+
         nflStandings.table.forEach(element => {
 
             let teamDiv = $("<div>")
                 .attr("class", "standings")
-                .append($("<h3>").text("Team: " + element.name).addClass("text-center"))
+                .append($("<h3>").text(element.name).addClass("text-center"))
                 .append($("<p>").text("Points For: " + element.goalsfor))
                 .append($("<p>").text("Points Against: " + element.goalsagainst))
                 .append($("<p>").text("Wins: " + element.wins))
@@ -561,6 +567,8 @@ $(document).ready(function () {
 
                 console.log(response);
 
+                standingsDiv.append($("<h1>").text("Standings"))
+
                 response.table.forEach(element => {
                     console.log("Team: " + element.name)
                     console.log("Points For: " + element.goalsfor)
@@ -571,7 +579,7 @@ $(document).ready(function () {
 
                     let teamDiv = $("<div>")
                         .attr("class", "standings")
-                        .append($("<h3>").text("Team: " + element.name).addClass("text-center"))
+                        .append($("<h3>").text(element.name).addClass("text-center"))
                         .append($("<p>").text("Points For: " + element.goalsfor))
                         .append($("<p>").text("Points Against: " + element.goalsagainst))
                         .append($("<p>").text("Wins: " + element.wins))
@@ -645,11 +653,13 @@ $(document).ready(function () {
                         })
                             .then(function (response) {
 
+                                rosterDiv.append($("<h1>").text("Roster"))
+
                                 response.player.forEach(element => {
 
                                     let teamDiv = $("<div>")
                                         .attr("class", "standings")
-                                        .append($("<h3>").text("Player Name: " + element.strPlayer).addClass("text-center"))
+                                        .append($("<h3>").text(element.strPlayer).addClass("text-center"))
                                         .append($("<p>").text("Date of Birth: " + element.dateBorn))
                                         .append($("<p>").text("Position: " + element.strPosition));
 
@@ -688,6 +698,7 @@ $(document).ready(function () {
                 })
                 .then(function (promise) {
 
+
                     teamIds.forEach(element => {
                         let teamId = element;
                         queryTeamInfo = "https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=" + teamId;
@@ -698,33 +709,30 @@ $(document).ready(function () {
                         })
                             .then(function (response) {
 
+                                scheduleDiv.append($("<h1>").text("Upcoming Games"))
+
                                 let teamDiv = $("<div>")
                                     .attr("class", "schedule")
-                                    .append($("<h3>").text("Matchup: " + response.events[0].strEvent))
+                                    .append($("<h3>").text(response.events[0].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[0].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[0].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[0].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[0].strTime))
-                                    .append($("<h3>").text("Matchup: " + response.events[1].strEvent))
+                                    .append($("<h3>").text(response.events[1].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[1].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[1].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[1].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[1].strTime))
-                                    .append($("<h3>").text("Matchup: " + response.events[2].strEvent))
+                                    .append($("<h3>").text(response.events[2].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[2].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[2].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[2].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[2].strTime))
-                                    .append($("<h3>").text("Matchup: " + response.events[3].strEvent))
+                                    .append($("<h3>").text(response.events[3].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[3].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[3].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[3].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[3].strTime))
-                                    .append($("<h3>").text("Matchup: " + response.events[4].strEvent))
+                                    .append($("<h3>").text(response.events[4].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[4].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[4].strAwayTeam))
-                                    .append($("<p>").text("Date: " + response.events[4].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[4].strTime));
+                                    .append($("<p>").text("Date: " + response.events[4].dateEvent));
 
 
                                 scheduleDiv.append(teamDiv);
@@ -748,11 +756,13 @@ $(document).ready(function () {
                         })
                             .then(function (response) {
 
+                                rosterDiv.append($("<h1>").text("Roster"))
+
                                 response.player.forEach(element => {
 
                                     let teamDiv = $("<div>")
                                         .attr("class", "standings")
-                                        .append($("<h3>").text("Player Name: " + element.strPlayer).addClass("text-center"))
+                                        .append($("<h3>").text(element.strPlayer).addClass("text-center"))
                                         .append($("<p>").text("Date of Birth: " + element.dateBorn))
                                         .append($("<p>").text("Position: " + element.strPosition));
 
@@ -789,6 +799,8 @@ $(document).ready(function () {
                 })
                 .then(function (promise) {
 
+                    scheduleDiv.append($("<h1>").text("Upcoming Games"))
+
                     teamIds.forEach(element => {
                         let teamId = element;
                         queryTeamInfo = "https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=" + teamId;
@@ -801,35 +813,30 @@ $(document).ready(function () {
 
                                 let teamDiv = $("<div>")
                                     .attr("class", "schedule")
-                                    .append($("<h3>").text("Matchup: " + response.events[0].strEvent))
+                                    .append($("<h3>").text(response.events[0].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[0].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[0].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[0].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[0].strTime))
                                     .append($("<p>").text("Week: " + response.events[0].intRound))
-                                    .append($("<h3>").text("Matchup: " + response.events[1].strEvent))
+                                    .append($("<h3>").text(response.events[1].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[1].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[1].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[1].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[1].strTime))
                                     .append($("<p>").text("Week: " + response.events[1].intRound))
-                                    .append($("<h3>").text("Matchup: " + response.events[2].strEvent))
+                                    .append($("<h3>").text(response.events[2].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[2].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[2].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[2].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[2].strTime))
                                     .append($("<p>").text("Week: " + response.events[2].intRound))
-                                    .append($("<h3>").text("Matchup: " + response.events[3].strEvent))
+                                    .append($("<h3>").text(response.events[3].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[3].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[3].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[3].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[3].strTime))
                                     .append($("<p>").text("Week: " + response.events[3].intRound))
-                                    .append($("<h3>").text("Matchup: " + response.events[4].strEvent))
+                                    .append($("<h3>").text(response.events[4].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[4].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[4].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[4].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[4].strTime))
                                     .append($("<p>").text("Week: " + response.events[4].intRound));
 
 
@@ -855,11 +862,13 @@ $(document).ready(function () {
                         })
                             .then(function (response) {
 
+                                rosterDiv.append($("<h1>").text("Roster"))
+
                                 response.player.forEach(element => {
 
                                     let teamDiv = $("<div>")
                                         .attr("class", "standings")
-                                        .append($("<h3>").text("Player Name: " + element.strPlayer).addClass("text-center"))
+                                        .append($("<h3>").text(element.strPlayer).addClass("text-center"))
                                         .append($("<p>").text("Date of Birth: " + element.dateBorn))
                                         .append($("<p>").text("Position: " + element.strPosition));
 
@@ -896,6 +905,8 @@ $(document).ready(function () {
                 })
                 .then(function (promise) {
 
+                    scheduleDiv.append($("<h1>").text("Upcoming Games"))
+
                     teamIds.forEach(element => {
                         let teamId = element;
                         queryTeamInfo = "https://www.thesportsdb.com/api/v1/json/1/eventsnext.php?id=" + teamId;
@@ -908,35 +919,30 @@ $(document).ready(function () {
 
                                 let teamDiv = $("<div>")
                                     .attr("class", "schedule")
-                                    .append($("<h3>").text("Matchup: " + response.events[0].strEvent))
+                                    .append($("<h3>").text(response.events[0].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[0].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[0].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[0].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[0].strTime))
                                     .append($("<p>").text("Week: " + response.events[0].intRound))
-                                    .append($("<h3>").text("Matchup: " + response.events[1].strEvent))
+                                    .append($("<h3>").text(response.events[1].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[1].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[1].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[1].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[1].strTime))
                                     .append($("<p>").text("Week: " + response.events[1].intRound))
-                                    .append($("<h3>").text("Matchup: " + response.events[2].strEvent))
+                                    .append($("<h3>").text(response.events[2].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[2].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[2].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[2].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[2].strTime))
                                     .append($("<p>").text("Week: " + response.events[2].intRound))
-                                    .append($("<h3>").text("Matchup: " + response.events[3].strEvent))
+                                    .append($("<h3>").text(response.events[3].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[3].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[3].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[3].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[3].strTime))
                                     .append($("<p>").text("Week: " + response.events[3].intRound))
-                                    .append($("<h3>").text("Matchup: " + response.events[4].strEvent))
+                                    .append($("<h3>").text(response.events[4].strEvent))
                                     .append($("<p>").text("Home Team: " + response.events[4].strHomeTeam))
                                     .append($("<p>").text("Away Team: " + response.events[4].strAwayTeam))
                                     .append($("<p>").text("Date: " + response.events[4].dateEvent))
-                                    .append($("<p>").text("Time: " + response.events[4].strTime))
                                     .append($("<p>").text("Week: " + response.events[4].intRound));
 
 
@@ -961,11 +967,13 @@ $(document).ready(function () {
                         })
                             .then(function (response) {
 
+                                rosterDiv.append($("<h1>").text("Roster"))
+
                                 response.player.forEach(element => {
 
                                     let teamDiv = $("<div>")
                                         .attr("class", "standings")
-                                        .append($("<h3>").text("Player Name: " + element.strPlayer).addClass("text-center"))
+                                        .append($("<h3>").text(element.strPlayer).addClass("text-center"))
                                         .append($("<p>").text("Date of Birth: " + element.dateBorn))
                                         .append($("<p>").text("Position: " + element.strPosition));
 
@@ -996,9 +1004,8 @@ $(document).ready(function () {
 
                     let teamDiv = $("<div>")
                         .attr("class", "standings")
-                        .append($("<h4>").text(element.strEvent))
-                        .append($("<p>").text("Time: " + element.strTime))
-                        .append($("<p>").text("date: " + element.dateEvent));
+                        .append($("<p>").text(element.strEvent))
+                        .append($("<h5>").text("date: " + element.dateEvent));
 
 
                     todaysDiv.append(teamDiv);

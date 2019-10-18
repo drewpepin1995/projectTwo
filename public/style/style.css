@@ -6,9 +6,11 @@ html {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Crimson Text', serif;
    }
+
    .nav-wrapper {
        background-color: lightgrey;
    }
+
    nav ul li a{
     color: black;
   }
@@ -116,14 +118,13 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-#teamButtonNFL, #teamButtonNHL, #teamButtonNBA, #teamButtonMLB {
+#teamButtonNFL, #teamButtonNHL, #teamButtonNBA, #teamButtonMLB, #addSmackBtn {
     background-color: #097100;
     width: 140px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
-
-
-
+#allSmacks, #addSmack {
+    border-bottom: 1px solid black;
+}

@@ -1,24 +1,25 @@
 <section id="add" class="container">
     <div class="form-wrap">
-      <h1>Add A Smack</h1>
-      <p>This is where fans can anonymously talk smack about opposing teams or players!</p>
+      <h1 id="addSmack">Add A Smack</h1>
+      <h2>This is where fans can anonymously talk smack about opposing teams or players!</h2>
       {{#each errors}}
         <div class="error">
           <p>{{text}}</p>
         </div>
       {{/each}}
-      <form action="/api/add" method="POST">
+      <form action="/smack/add" method="POST">
         <div class="input-group">
-          <label for="title">Team or player you want to smack talk</label>
+          <label for="title"><h3>Team or player you want to smack talk</h3></label>
           <input type="text" name="team" id="team" class="input-box" placeholder="eg. New England Patriots, Boston Bruins, Boston Celtics"
             maxlength="100" value={{team}}>
         </div>
         <div class="input-group">
-          <label for="description">Smack Talk</label>
+          <label for="description"><h3>Smack Talk</h3></label>
           <textarea name="smack" id="smack" class="input-box" placeholder="Talk some smack about an opposing team!"
             rows="10">{{smack}}</textarea>
         </div>
-        <input type="submit" value="Add smack" class="btn btn-reverse">
+        <input type="submit" value="Add smack" class="btn btn-reverse" id="addSmackBtn">
       </form>
+      <br><br><br><br>
     </div>
   </section>
