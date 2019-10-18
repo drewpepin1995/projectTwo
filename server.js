@@ -6,9 +6,9 @@ const path = require("path")
 
 const db = require("./models")
 
-/* db.authenticate()
+ /* db.authenticate()
     .then(() => console.log("database connected"))
-    .catch(err => console.log("Error: " + err)) */
+    .catch(err => console.log("Error: " + err)) /*/
 
 const app = express();
 
