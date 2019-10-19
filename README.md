@@ -1,4 +1,4 @@
-# projectTwo
+# World Famous Sports Encyclopedia
 This is a front end sports application built with Materialize & jQuery for dynamic responsiveness utilizing a sport API.
 
 ## Creators 
