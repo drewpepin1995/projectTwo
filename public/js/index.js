@@ -26,6 +26,7 @@ $(document).ready(function () {
     let rosterDiv = $("#roster")
     let todaysDiv = $("#todaysEvents")
 
+    //Writing our MLB/NFL standings since API didn't have them. 
     const mlbStandings = {
         "table": [{
             "name": "Houston Astros",
@@ -470,7 +471,7 @@ $(document).ready(function () {
     }
 
 
-
+// Function to get and display NHL standings
     function getNhlStandings() {
 
         $.ajax({
@@ -510,6 +511,7 @@ $(document).ready(function () {
 
     };
 
+// Function to get and display MLB standings
     function getMlbStandings() {
 
         standingsDiv.append($("<h1>").text("Standings"))
@@ -533,6 +535,7 @@ $(document).ready(function () {
     };
 
 
+// Function to get and display NFL standings
     function getNflStandings() {
 
         standingsDiv.append($("<h1>").text("Standings"))
@@ -557,6 +560,7 @@ $(document).ready(function () {
 
     };
 
+// Function to get and display NBA standings
     function getNbaStandings() {
 
         $.ajax({
@@ -596,6 +600,7 @@ $(document).ready(function () {
 
     };
 
+// Function to get and display MLB schedule
     function getMlbSchedule() {
 
         let teamDiv = $("<div>")
@@ -609,6 +614,7 @@ $(document).ready(function () {
 
     };
 
+// Function to get and display MLB Roster
     function getMlbRoster() {
 
         let teamValue = $("#teamChoiceMLB option:selected").text().replace(/ /g, "_");
@@ -665,6 +671,7 @@ $(document).ready(function () {
     };
 
 
+// Function to get and display NHL schedule
     function getNhlSchedule() {
 
         let teamValue = $("#teamChoiceNHL option:selected").text().replace(/ /g, "_");
@@ -734,6 +741,7 @@ $(document).ready(function () {
     };
 
 
+// Function to get and display NHL roster
     function getNhlRoster() {
         let teamValue = $("#teamChoiceNHL option:selected").text().replace(/ /g, "_");
 
@@ -786,6 +794,7 @@ $(document).ready(function () {
 
     };
 
+// Function to get and display NFL schedule
     function getNflSchedule() {
 
         let teamValue = $("#teamChoiceNFL option:selected").text().replace(/ /g, "_");
@@ -859,6 +868,7 @@ $(document).ready(function () {
                 })
     };
 
+// Function to get and display NFL roster
     function getNflRoster() {
 
         let teamValue = $("#teamChoiceNFL option:selected").text().replace(/ /g, "_");
@@ -912,6 +922,7 @@ $(document).ready(function () {
 
     };
 
+// Function to get and display NBA schedule
     function getNbaSchedule() {
 
         let teamValue = $("#teamChoiceNBA option:selected").text().replace(/ /g, "_");
@@ -984,6 +995,7 @@ $(document).ready(function () {
                 })
     };
 
+// Function to get and display NBA roster
     function getNbaRoster() {
         let teamValue = $("#teamChoiceNBA option:selected").text().replace(/ /g, "_");
 
@@ -1036,8 +1048,7 @@ $(document).ready(function () {
     };
 
 
-    // Getting todays events 
-
+// Getting this weeks NFL games 
     function getTodaysEvents() {
 
         $.ajax({
@@ -1063,13 +1074,16 @@ $(document).ready(function () {
             });
     };
 
-    //Function calls
+//Function calls
 
     getTodaysEvents();
 
     $("#teamButtonNBA").on("click", function () {
 
         $("#schedule, #standings, #roster").empty();
+        $("#teamChoiceNHL option:selected").removeAttr("selected")
+        $("#teamChoiceNFL option:selected").removeAttr("selected")
+        $("#teamChoiceMLB option:selected").removeAttr("selected")
         teamIds = [];
 
         getNbaRoster();
@@ -1083,6 +1097,9 @@ $(document).ready(function () {
 
         $("#schedule, #standings, #roster").empty();
         teamIds = [];
+        $("#teamChoiceNHL option:selected").removeAttr("selected")
+        $("#teamChoiceNBA option:selected").removeAttr("selected")
+        $("#teamChoiceMLB option:selected").removeAttr("selected")
 
         getNflRoster();
         getNflSchedule();
@@ -1096,6 +1113,9 @@ $(document).ready(function () {
         $("#schedule, #standings, #roster").empty();
 
         teamIds = [];
+        $("#teamChoiceNBA option:selected").removeAttr("selected")
+        $("#teamChoiceNFL option:selected").removeAttr("selected")
+        $("#teamChoiceMLB option:selected").removeAttr("selected")
         getNhlRoster();
         getNhlSchedule();
         getNhlStandings();
@@ -1108,6 +1128,9 @@ $(document).ready(function () {
         $("#schedule, #standings, #roster").empty();
 
         teamIds = [];
+        $("#teamChoiceNHL option:selected").removeAttr("selected")
+        $("#teamChoiceNFL option:selected").removeAttr("selected")
+        $("#teamChoiceNBA option:selected").removeAttr("selected")
         getMlbRoster();
         getMlbSchedule();
         getMlbStandings();
