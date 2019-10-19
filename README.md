@@ -12,21 +12,21 @@ https://worldfamousports.herokuapp.com
 
 ## Features
 
-- Team Info
+Team Info
  - Rosters
  - Standings
  - Upcoming games
  
-- This weeks games
- - Easily access this weeks NFL games on the homepage. 
+This weeks games
+   - Easily access this weeks NFL games on the homepage. 
  
-- Smack Talk 
+Smack Talk 
  - See what people are saying about your favorite team or player.
  
-- Add smack talk 
+Add smack talk 
  - Add your own smack talk about an opposing team or player.
  
-- Search for smack talk
+Search for smack talk
  - Filter smack talk for a specific team or player. 
 
 ## Future enhancements
