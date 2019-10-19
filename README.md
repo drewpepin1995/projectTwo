@@ -1,5 +1,5 @@
 # World Famous Sports Encyclopedia
-This is a front end sports application built with Materialize & jQuery for dynamic responsiveness utilizing a sport API.
+This is a front end sports application built with Materialize & jQuery for dynamic responsiveness utilizing a sport API, as well as information from a backend database. 
 
 ## Creators 
 - Drew Pepin
