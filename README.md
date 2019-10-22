@@ -36,7 +36,7 @@ Search for smack talk
 - Include more sports leagues. 
 - Include more info on the sports leagues/teams. 
 
-![alt text](./html/images/WFSE.JPG "WFSE App")
+![alt text](./public/html/images/WFSE.JPG "WFSE App")
 
 ### [Try the App!](https://worldfamousports.herokuapp.com)
 
