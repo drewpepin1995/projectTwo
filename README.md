@@ -36,6 +36,8 @@ Search for smack talk
 - Include more sports leagues. 
 - Include more info on the sports leagues/teams. 
 
+![alt text](../html/images/WFSE.JPG "WFSE App")
+
 ### [Try the App!](https://worldfamousports.herokuapp.com)
 
 Technology: HTML5 | CSS3 | JavaScript | jQuery Bootstrap | API | mySQL | Sequelize | NodeJS | JawsDB
