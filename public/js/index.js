@@ -523,7 +523,7 @@ $(document).ready(function () {
                 .append($("<h3>").text(element.name).addClass("text-center"))
                 .append($("<p>").text("Runs For: " + element.goalsfor))
                 .append($("<p>").text("Runs Against: " + element.goalsagainst))
-                .append($("<p>").text("Wins: " + element.wins))
+                .append($("<p>").text("Wins: " + element.win))
                 .append($("<p>").text("Losses: " + element.loss));
 
 
@@ -547,7 +547,7 @@ $(document).ready(function () {
                 .append($("<h3>").text(element.name).addClass("text-center"))
                 .append($("<p>").text("Points For: " + element.goalsfor))
                 .append($("<p>").text("Points Against: " + element.goalsagainst))
-                .append($("<p>").text("Wins: " + element.wins))
+                .append($("<p>").text("Wins: " + element.win))
                 .append($("<p>").text("Losses: " + element.loss));
 
 
