@@ -12,7 +12,9 @@ h1, h2, h3, h4, h5, h6 {
    }
 
    nav ul li a{
-    color: black;
+    color: #097100;
+    font-weight: bold;
+
   }
  
 #logo {
@@ -112,6 +114,7 @@ h2 {
 #header {
     background-image: url("../html/logos/background.png");
     background-size: cover;
+    margin-top: 0;
 }
 img {
     display: block;
@@ -130,4 +133,11 @@ img {
 }
 nav {
     margin-bottom: 1rem;
+}
+
+#navLogo {
+    margin-left: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #097100;
+    font-weight: bold;
 }
