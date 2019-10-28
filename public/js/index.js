@@ -1139,7 +1139,7 @@ $(document).ready(function () {
     })
 
     $("a").on("click", function(){
-        event.preventDefault();
+        
         $("form").animate({height: "toggle", opacity: "toggle"}, "slow")
     })
 
