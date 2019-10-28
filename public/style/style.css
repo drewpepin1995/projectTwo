@@ -8,11 +8,11 @@ h1, h2, h3, h4, h5, h6 {
    }
 
    .nav-wrapper {
-       background-color: lightgrey;
+       background-color: #097100;
    }
 
    nav ul li a{
-    color: #097100;
+    color:white;
     font-weight: bold;
 
   }
@@ -138,6 +138,84 @@ nav {
 #navLogo {
     margin-left: 1rem;
     font-family: 'Times New Roman', Times, serif;
-    color: #097100;
+    color:white;
     font-weight: bold;
+}
+
+.login {
+    width: 500px;
+    padding: 10% 0 0;
+    margin: auto;
+    margin-bottom: 2rem;
+
+}
+
+input::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+.registerForm {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+.register input {
+    outline: 1;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: lightgray;
+    font-size: 15px;
+
+}
+
+.register button {
+    margin-top: 2rem;
+    padding: 15px;
+    text-transform: uppercase;
+    outline: 0;
+    width: 100%;
+    border: 0;
+    background-color: #097100;
+    color: white;
+}
+
+.loginForm button {
+    margin-top: 2rem;
+    padding: 15px;
+    text-transform: uppercase;
+    outline: 0;
+    width: 100%;
+    border: 0;
+    background-color: #097100;
+    color: white;
+}
+
+.loginForm input {
+    outline: 1;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: lightgray;
+    font-size: 15px;
+
+}
+
+.register {
+    display: none;
+}
+
+.message {
+    text-align: center;
 }

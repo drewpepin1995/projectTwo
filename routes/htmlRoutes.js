@@ -18,6 +18,13 @@ router.get('/smack', (req, res) =>
         .catch(err => console.log("error: " + err)));
 
 
+router.get("/login", function (req, res) {
+    console.log(db);
+    res.render("login", { layout: 'landing' })
+});
+
+
+
 
 
 module.exports = router
